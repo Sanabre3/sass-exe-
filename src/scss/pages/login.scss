@@ -1,0 +1,82 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixin' as *; 
+
+
+.login-container {
+    display: flex;
+    min-height: 100vh;
+
+    .login-image {
+        flex: 1;
+        background-color: $bg-panel;
+        @include flex-center;
+        border-radius: 16px;
+        padding: $spacing-xl;
+
+        img {
+            max-width: 80%;
+            max-height: 80%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        @include responsive($bp-md) {
+            display: none;
+        }
+    }
+
+    .login-content {
+        flex: 1;
+        @include flex-center;
+        background-color: $bg-light;
+        padding: $spacing-lg;
+    }
+
+    .login-form {
+        @include card;
+        padding: $spacing-xxl;
+        width: 100%;
+        max-width: $form-max-width;
+        border-top: 4px solid $primary;
+
+        @include responsive($bp-sm) {
+            padding: $spacing-xl;
+        }
+    }
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+
+    h1 {
+        font-size: $font-size-xl;
+        font-weight: $font-weight-bold;
+        color: $text-dark;
+        margin-bottom: $spacing-xs;
+    }
+
+    p {
+        color: $text-light;
+    }
+}
+
+.social-login {
+    display: flex;
+    gap: $spacing-sm;
+    margin-top: $spacing-lg;
+
+    .btn-social {
+        flex: 1;
+        @include button-base;
+        background: transparent;
+        border: 2px solid #ddd;
+        color: $text-dark;
+
+        &:hover {
+            background-color: #f8f9fa;
+        }
+    }
+}

@@ -1,0 +1,107 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixin' as *;
+
+.form-group {
+    margin-bottom: $spacing-lg;
+
+    label {
+        display: block;
+        margin-bottom: $spacing-xs;
+        font-weight: $font-weight-medium;
+        color: $text-dark;
+    }
+}
+
+.form-control {
+    @include input-base;
+
+    &:focus {
+        border-color: $primary;
+        @include focus-ring;
+    }
+
+    &.error {
+        @include error-state;
+    }
+
+    &.success {
+        @include success-state;
+    }
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    margin-bottom: $spacing-md;
+
+    input[type="checkbox"] {
+        width: auto;
+    }
+
+    label {
+        margin-bottom: 0;
+        font-weight: $font-weight-normal;
+        cursor: pointer;
+    }
+}
+
+.error-message {
+    display: block;
+    margin-top: $spacing-xs;
+    font-size: $font-size-sm;
+    color: $text-error;
+}
+
+.checkbox-label {
+    position: relative;
+    padding-left: 24px;
+
+    input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+        left: 0;
+        top: 2px;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        height: 16px;
+        width: 16px;
+        background-color: #ffffff;
+        border: 2px solid #ddd;
+        border-radius: 3px;
+        transition: 0.3s ease-in-out;
+    }
+
+    &:hover input~.checkmark {
+        border-color: #4aa4ee;
+    }
+
+    input:checked~.checkmark {
+        background-color: #4aa4ee;
+        border-color: #4aa4ee;
+    }
+
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 4px;
+        top: 1px;
+        width: 4px;
+        height: 8px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+
+    input:checked~.checkmark:after {
+        display: block;
+    }
+}

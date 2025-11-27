@@ -1,0 +1,363 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.6;
+  color: #32324f;
+  background-color: #f8f9fa;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+p {
+  margin-bottom: 16px;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+small {
+  font-size: 14px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+}
+
+.col {
+  flex: 1;
+  padding: 0 8px;
+}
+
+.col-auto {
+  flex: 0 0 auto;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.btn-primary {
+  background-color: #4aa4ee;
+  color: white;
+  width: 100%;
+}
+.btn-primary:hover {
+  background-color: #3286ca;
+}
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+.btn-secondary:hover {
+  background-color: rgb(67.8128755365, 73.4639484979, 78.4871244635);
+}
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid #4aa4ee;
+  color: #4aa4ee;
+}
+.btn-outline:hover {
+  background-color: #4aa4ee;
+  color: white;
+}
+.btn-block {
+  width: 100%;
+  display: flex;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #32324f;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 16px;
+  background-color: #ecf2f7;
+  color: #32324f;
+  transition: 0.3s ease-in-out;
+  outline: none;
+}
+.form-control:focus {
+  border-color: #4aa4ee;
+  box-shadow: 0 0 0 3px rgba(74, 164, 238, 0.12);
+}
+.form-control.error {
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.12);
+}
+.form-control.success {
+  border-color: #28a745;
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.12);
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.form-check input[type=checkbox] {
+  width: auto;
+}
+.form-check label {
+  margin-bottom: 0;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.error-message {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #e74c3c;
+}
+
+.checkbox-label {
+  position: relative;
+  padding-left: 24px;
+}
+.checkbox-label input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  left: 0;
+  top: 2px;
+}
+.checkbox-label .checkmark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #ffffff;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+  transition: 0.3s ease-in-out;
+}
+.checkbox-label:hover input ~ .checkmark {
+  border-color: #4aa4ee;
+}
+.checkbox-label input:checked ~ .checkmark {
+  background-color: #4aa4ee;
+  border-color: #4aa4ee;
+}
+.checkbox-label .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 4px;
+  top: 1px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.checkbox-label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.card-header {
+  padding: 24px;
+  border-bottom: 1px solid #eee;
+}
+.card-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+.card-body {
+  padding: 24px;
+}
+.card-footer {
+  padding: 24px;
+  border-top: 1px solid #eee;
+  background-color: #f8f9fa;
+}
+
+.login-container {
+  display: flex;
+  min-height: 100vh;
+}
+.login-container .login-image {
+  flex: 1;
+  background-color: #b3d5f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  padding: 32px;
+}
+.login-container .login-image img {
+  max-width: 80%;
+  max-height: 80%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+@media (max-width: 768px) {
+  .login-container .login-image {
+    display: none;
+  }
+}
+.login-container .login-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 24px;
+}
+.login-container .login-form {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 48px;
+  width: 100%;
+  max-width: 450px;
+  border-top: 4px solid #4aa4ee;
+}
+@media (max-width: 576px) {
+  .login-container .login-form {
+    padding: 32px;
+  }
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.login-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #32324f;
+  margin-bottom: 8px;
+}
+.login-header p {
+  color: #607d8b;
+}
+
+.social-login {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+.social-login .btn-social {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.social-login .btn-social:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.social-login .btn-social {
+  background: transparent;
+  border: 2px solid #ddd;
+  color: #32324f;
+}
+.social-login .btn-social:hover {
+  background-color: #f8f9fa;
+}
+
+/*# sourceMappingURL=main.css.map */

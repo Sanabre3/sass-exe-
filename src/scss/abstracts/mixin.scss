@@ -1,0 +1,85 @@
+@use '../abstracts/variables' as *;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin container {
+    width: 100%;
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+}
+
+@mixin button-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: $spacing-sm $spacing-lg;
+    border: none;
+    border-radius: $border-radius;
+    font-family: $font-main;
+    font-weight: $font-weight-medium;
+    text-decoration: none;
+    cursor: pointer;
+    transition: $transition;
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
+
+@mixin input-base {
+    width: 100%;
+    padding: $spacing-sm $spacing-md;
+    border: 1px solid #ddd;
+    border-radius: $border-radius;
+    font-family: $font-main;
+    font-size: $font-size-base;
+    background-color: #ecf2f7;
+    color: $text-dark;
+    transition: $transition;
+    outline: none;
+}
+
+@mixin card {
+    background: $bg-white;
+    border-radius: $border-radius-lg;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+@mixin focus-ring($color: $primary) {
+    box-shadow: 0 0 0 3px rgba($color, 0.12);
+}
+
+@mixin error-state {
+    border-color: $text-error;
+    @include focus-ring($text-error);
+}
+
+@mixin success-state {
+    border-color: $text-success;
+    @include focus-ring($text-success);
+}
+
+@mixin responsive($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin responsive-min($breakpoint) {
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+}

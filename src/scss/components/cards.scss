@@ -1,0 +1,26 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixin' as *; 
+
+.card {
+    @include card;
+
+    &-header {
+        padding: $spacing-lg;
+        border-bottom: 1px solid #eee;
+
+        h3 {
+            margin: 0;
+            font-size: $font-size-lg;
+        }
+    }
+
+    &-body {
+        padding: $spacing-lg;
+    }
+
+    &-footer {
+        padding: $spacing-lg;
+        border-top: 1px solid #eee;
+        background-color: #f8f9fa;
+    }
+}

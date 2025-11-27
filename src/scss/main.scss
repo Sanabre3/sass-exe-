@@ -1,0 +1,18 @@
+// 1. ABSTRACTS - SEMPRE PRIMEIRO
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixin' as *;
+
+// 2. BASE
+@use 'base/reset';
+@use 'base/typography';
+
+// 3. LAYOUT
+@use 'layout/grid';
+
+// 4. COMPONENTS
+@use 'components/buttons';
+@use 'components/forms';
+@use 'components/cards';
+
+// 5. PAGES
+@use 'pages/login';

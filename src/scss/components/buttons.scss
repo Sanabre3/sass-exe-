@@ -1,0 +1,40 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixin' as *; 
+.btn {
+    @include button-base;
+
+    &-primary {
+        background-color: $primary;
+        color: white;
+        width: 100%;
+
+        &:hover {
+            background-color: $primary-hover;
+        }
+    }
+
+    &-secondary {
+        background-color: $secondary;
+        color: white;
+
+        &:hover {
+            background-color: darken($secondary, 17%);
+        }
+    }
+
+    &-outline {
+        background-color: transparent;
+        border: 1px solid $primary;
+        color: $primary;
+
+        &:hover {
+            background-color: $primary;
+            color: white;
+        }
+    }
+
+    &-block {
+        width: 100%;
+        display: flex;
+    }
+}

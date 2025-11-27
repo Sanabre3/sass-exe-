@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixin' as *;
+
+.container {
+    @include container;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 (-$spacing-md / 2);
+}
+
+.col {
+    flex: 1;
+    padding: 0 ($spacing-md / 2);
+}
+
+.col-auto {
+    flex: 0 0 auto;
+}
