@@ -135,36 +135,39 @@ npm run dev: Compila Sass em modo watch (--watch) com CSS expandido
 npm run build: Compila Sass com CSS comprimido para produção
 npm run build:dev: Compila Sass com CSS expandido para desenvolvimento
 ```
-🎯 Funcionalidades
-✅ Implementadas
- Layout responsivo com CSS Grid/Flexbox
- Validação de formulário em JavaScript
- Animações e transições suaves
- Funcionalidade "Lembrar de mim" com localStorage
- Design system consistente com variáveis Sass
- Acessibilidade básica (semântica HTML, navegação por teclado)
- Source maps para debug
- Checkbox customizado
-🔄 Roadmap
- Autenticação real com backend
- Página de recuperação de senha
- Modo escuro/claro
- Testes automatizados (Jest)
- PWA (Progressive Web App)
- Internacionalização (i18n)
-🎨 Customização
-🎨 Cores
-Edite src/scss/abstracts/_variables.scss:
+## 🎯 Funcionalidades
 
-scss
-Copiar
+### ✅ Implementadas
+- [x] Layout responsivo com CSS Grid/Flexbox
+- [x] Validação de formulário em JavaScript
+- [x] Animações e transições suaves
+- [x] Funcionalidade "Lembrar de mim" com localStorage
+- [x] Design system consistente com variáveis Sass
+- [x] Acessibilidade básica (semântica HTML, navegação por teclado)
+- [x] Source maps para debug
+- [x] Checkbox customizado
 
+### 🔄 Roadmap
+- [ ] Autenticação real com backend
+- [ ] Página de recuperação de senha
+- [ ] Modo escuro/claro
+- [ ] Testes automatizados (Jest)
+- [ ] PWA (Progressive Web App)
+- [ ] Internacionalização (i18n)
+
+## 🎨 Customização
+
+### 🎨 **Cores**
+Edite `src/scss/abstracts/_variables.scss`:
+
+```scss
 // Cores principais
 $primary: #4aa4ee;              // Azul principal
 $primary-hover: #3286ca;        // Azul hover
 $bg-panel: #b3d5f1;            // Fundo do painel
 $bg-light: #f8f9fa;            // Fundo claro
 $text-dark: #32324f;           // Texto principal
+```
 🔤 Tipografia
 scss
 Copiar
