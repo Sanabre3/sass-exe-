@@ -90,6 +90,7 @@ sass-login-project/
 ├─ package-lock.json           # Lock das dependências
 ├─ package.json                # Configurações do projeto
 └─ README.md                   # Documentação
+```
 🎨 Arquitetura Sass (7-1)
 O projeto utiliza a arquitetura 7-1 para organização do Sass:
 
