@@ -58,7 +58,6 @@ Copiar
 
 npm run dev
 Abra o arquivo index.html no navegador
-```
 📁 Estrutura do Projeto
 sass-login-project/
 ├─ dist/                        # Arquivos compilados
@@ -196,4 +195,5 @@ $spacing-xl: 32px;             // Extra grande
 $bp-sm: 576px;                 // Small devices
 $bp-md: 768px;                 // Medium devices
 ```
+
 
