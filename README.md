@@ -168,15 +168,15 @@ $bg-panel: #b3d5f1;            // Fundo do painel
 $bg-light: #f8f9fa;            // Fundo claro
 $text-dark: #32324f;           // Texto principal
 ```
-🔤 Tipografia
-scss
-Copiar
+### 🔤 **Tipografia**
 
+```scss
 // Fonte e tamanhos
 $font-main: 'Inter', Arial, sans-serif;
 $font-size-base: 16px;
 $font-size-lg: 18px;
 $font-size-xl: 24px;
+```
 📏 Espaçamentos
 scss
 Copiar
@@ -214,7 +214,7 @@ JavaScript ES6+	-	Interatividade e validação
 CSS Grid	-	Layout principal
 Flexbox	-	Alinhamento de componentes
 Google Fonts	-	Tipografia (Inter)
-🚀 Performance
+�� Performance
 Otimizações Implementadas:
 ✅ CSS Minificado: Build de produção comprimido
 ✅ Source Maps: Debug facilitado em desenvolvimento
