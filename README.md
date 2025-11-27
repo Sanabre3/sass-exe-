@@ -51,66 +51,41 @@ Instale as dependências
 bash
 Copiar
 
-📁 Estrutura do Projeto
-sass-login-project/
-├─ dist/                        # Arquivos compilados
-│  └─ css/
-│     ├─ main.css              # CSS compilado pelo Sass
-│     └─ main.css.map          # Source map para debug
-├─ node_modules/               # Dependências do npm
-├─ src/                        # Código fonte
-│  ├─ assets/                  # Recursos estáticos
-│  │  └─ images/               # Imagens do projeto
-│  ├─ js/                      # JavaScript
-│  │  └─ main.js               # Script principal
-│  ├─ scss/                    # Arquivos Sass
-│  │  ├─ abstracts/            # Variáveis e mixins
-│  │  │  ├─ _variables.scss    # Variáveis globais
-│  │  │  └─ _mixins.scss       # Mixins reutilizáveis
-│  │  ├─ base/                 # Estilos base
-│  │  │  ├─ _reset.scss        # Reset CSS
-│  │  │  └─ _typography.scss   # Tipografia
-│  │  ├─ components/           # Componentes reutilizáveis
-│  │  │  ├─ _buttons.scss      # Estilos de botões
-│  │  │  ├─ _cards.scss        # Estilos de cards
-│  │  │  └─ _forms.scss        # Estilos de formulários
-│  │  ├─ layout/               # Layout e estrutura
-│  │  │  └─ _grid.scss         # Sistema de grid
-│  │  ├─ pages/                # Estilos específicos
-│  │  │  └─ _login.scss        # Página de login
-│  │  └─ main.scss             # Arquivo principal Sass
-├─ index.html                  # Página principal
-├─ package-lock.json           # Lock das dependências
-├─ package.json                # Configurações do projeto
-└─ README.md                   # Documentação
-🎨 Arquitetura Sass (7-1)
-O projeto utiliza a arquitetura 7-1 para organização do Sass:
+## 📁 Estrutura do Projeto
+sass-login-project/ ├─ dist/ # Arquivos compilados │ └─ css/ │ ├─ main.css # CSS compilado pelo Sass │ └─ main.css.map # Source map para debug ├─ node_modules/ # Dependências do npm ├─ src/ # Código fonte │ ├─ assets/ # Recursos estáticos │ │ └─ images/ # Imagens do projeto │ ├─ js/ # JavaScript │ │ └─ main.js # Script principal │ ├─ scss/ # Arquivos Sass │ │ ├─ abstracts/ # Variáveis e mixins │ │ │ ├─ _variables.scss # Variáveis globais │ │ │ └─ _mixins.scss # Mixins reutilizáveis │ │ ├─ base/ # Estilos base │ │ │ ├─ _reset.scss # Reset CSS │ │ │ └─ _typography.scss # Tipografia │ │ ├─ components/ # Componentes reutilizáveis │ │ │ ├─ _buttons.scss # Estilos de botões │ │ │ ├─ _cards.scss # Estilos de cards │ │ │ └─ _forms.scss # Estilos de formulários │ │ ├─ layout/ # Layout e estrutura │ │ │ └─ _grid.scss # Sistema de grid │ │ ├─ pages/ # Estilos específicos │ │ │ └─ _login.scss # Página de login │ │ └─ main.scss # Arquivo principal Sass ├─ index.html # Página principal ├─ package-lock.json # Lock das dependências ├─ package.json # Configurações do projeto └─ README.md # Documentação
 
-📂 abstracts/
+
+## 🎨 Arquitetura Sass (7-1)
+
+O projeto utiliza a **arquitetura 7-1** para organização do Sass:
+
+### 📂 **abstracts/**
 Contém variáveis, mixins e funções que não geram CSS por si só:
+- `_variables.scss` - Cores, tipografia, espaçamentos
+- `_mixins.scss` - Mixins reutilizáveis
 
-_variables.scss - Cores, tipografia, espaçamentos
-_mixins.scss - Mixins reutilizáveis
-📂 base/
+### 📂 **base/**
 Estilos fundamentais e reset:
+- `_reset.scss` - Reset CSS e estilos base
+- `_typography.scss` - Estilos de tipografia
 
-_reset.scss - Reset CSS e estilos base
-_typography.scss - Estilos de tipografia
-📂 components/
+### 📂 **components/**
 Componentes reutilizáveis:
+- `_buttons.scss` - Estilos de botões
+- `_cards.scss` - Estilos de cards
+- `_forms.scss` - Formulários e inputs
 
-_buttons.scss - Estilos de botões
-_cards.scss - Estilos de cards
-_forms.scss - Formulários e inputs
-📂 layout/
+### 📂 **layout/**
 Estrutura e layout:
+- `_grid.scss` - Sistema de grid e containers
 
-_grid.scss - Sistema de grid e containers
-📂 pages/
+### 📂 **pages/**
 Estilos específicos de páginas:
+- `_login.scss` - Página de login
 
-_login.scss - Página de login
-📜 Scripts Disponíveis
+## 📜 Scripts Disponíveis
+
+```bash
 # Desenvolvimento (watch mode) - Monitora mudanças
 npm run dev
 
@@ -119,7 +94,6 @@ npm run build
 
 # Build para desenvolvimento (CSS expandido)
 npm run build:dev
-
 Detalhes dos Scripts:
 npm run dev: Compila Sass em modo watch (--watch) com CSS expandido
 npm run build: Compila Sass com CSS comprimido para produção
@@ -134,7 +108,7 @@ npm run build:dev: Compila Sass com CSS expandido para desenvolvimento
  Acessibilidade básica (semântica HTML, navegação por teclado)
  Source maps para debug
  Checkbox customizado
-�� Roadmap
+🔄 Roadmap
  Autenticação real com backend
  Página de recuperação de senha
  Modo escuro/claro
@@ -144,3 +118,27 @@ npm run build:dev: Compila Sass com CSS expandido para desenvolvimento
 🎨 Customização
 🎨 Cores
 Edite src/scss/abstracts/_variables.scss:
+
+scss
+Copiar
+
+// Cores principais
+$primary: #4aa4ee;              // Azul principal
+$primary-hover: #3286ca;        // Azul hover
+$bg-panel: #b3d5f1;            // Fundo do painel
+$bg-light: #f8f9fa;            // Fundo claro
+$text-dark: #32324f;           // Texto principal
+
+### **🎯 Pontos Importantes:**
+
+1. **Use exatamente 3 crases** (```) antes e depois do bloco
+2. **Não deixe espaços** antes das crases
+3. **Mantenha uma linha vazia** antes e depois dos blocos de código
+4. **Use `bash` ou `scss`** após as crases para syntax highlighting
+
+### **📝 Dica para Testar:**
+
+1. **Copie exatamente** o texto acima
+2. **Cole no seu README.md**
+3. **Salve o arquivo**
+4. **Visualize no GitHub** ou em um visualizador de Markdown
