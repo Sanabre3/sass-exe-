@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass src/scss/main.scss dist/css/main.css --watch",
-    "build-css": "sass src/scss/main.scss dist/css/main.css --style compressed",
+    "build-css": "npx sass src/scss/main.scss dist/css/main.css --style compressed",
     "build-js": "mkdir -p dist/js && cp src/js/main.js dist/js/",
     "build": "npm run build-css && npm run build-js",
     "dev": "npm run sass"
